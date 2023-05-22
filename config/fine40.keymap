@@ -22,21 +22,6 @@
     };
   };
 
-    keymap {
-        compatible = "zmk,keymap";
-
-        first {
-      sensor-bindings = <&layer_rotate 1 0>;
-    };
-
-    second {
-      sensor-bindings = <&layer_rotate 2 0>;
-    };
-
-    third {
-      sensor-bindings = <&layer_rotate 2 1>;
-    };
-  };
 		default_layer {
 			label = "''AIR''";
 			bindings = <
@@ -46,7 +31,9 @@
 				&kp LALT &kp LSHFT &kp LALT &kp BSLH &mo 2 &kp SPACE &lt 1 SPACE &kp UP  &kp LEFT    &kp DOWN  &kp RIGHT &kp C_PP
 			>;
 
-			sensor-bindings = <&&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+			  sensor-bindings =
+                <&layer_rotate 1 0>,
+                <&inc_dec_kp 0 0>;
 		};
 
 		num_layer {
@@ -57,6 +44,7 @@
 				&trans        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp LS(COMMA) &kp LS(DOT)  &trans     &trans
 				&trans        &trans     &trans     &trans     &trans     &trans     &trans     &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP &kp C_PP   &trans
 			>;
+			sensor-bindings = <&layer_rotate 2 0>;
 		};
 
 		left {
@@ -67,6 +55,9 @@
 				&trans    &trans &trans &trans &trans &trans &trans &trans    &trans    &trans    &trans   &trans
 				&trans    &trans &trans &trans &trans &trans &trans &kp HOME  &kp PG_DN &kp PG_UP &kp END  &trans
 			>;
+		sensor-bindings =
+                <&layer_rotate 2 1>,
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
 		};
 
 		control {
@@ -76,6 +67,9 @@
 				&trans     &kp F1      &kp F2     &kp F3     &kp F4     &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &trans
 				&trans     &trans      &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &ext_power EP_ON
 			>;
+			sensor-bindings =
+                <&layer_rotate 2 1>,
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
 		};
 	};
 };
