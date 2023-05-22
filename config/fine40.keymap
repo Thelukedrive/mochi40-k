@@ -46,7 +46,7 @@
 				&kp LALT &kp LSHFT &kp LALT &kp BSLH &mo 2 &kp SPACE &lt 1 SPACE &kp UP  &kp LEFT    &kp DOWN  &kp RIGHT &kp C_PP
 			>;
 
-			sensor-bindings = <&layer_rotate 1 0>;
+			sensor-bindings = <&&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
 		};
 
 		num_layer {
