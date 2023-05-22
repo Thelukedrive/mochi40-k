@@ -9,10 +9,34 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+#define ''AIR'' 0
+#define XD 1
+#define LOL 2
 / {
-	keymap {
-		compatible = "zmk,keymap";
+  behaviors {
+    layer_rotate: layer_rotate {
+      compatible = "zmk,behavior-sensor-rotate-var";
+      label = "LAYER_ROTATE";
+      #sensor-binding-cells = <2>;
+      bindings = <&to>, <&to>;
+    };
+  };
 
+    keymap {
+        compatible = "zmk,keymap";
+
+        first {
+      sensor-bindings = <&layer_rotate 1 0>;
+    };
+
+    second {
+      sensor-bindings = <&layer_rotate 2 0>;
+    };
+
+    third {
+      sensor-bindings = <&layer_rotate 2 1>;
+    };
+  };
 		default_layer {
 			label = "''AIR''";
 			bindings = <
@@ -22,10 +46,10 @@
 				&kp LALT &kp LSHFT &kp LALT &kp BSLH &mo 2 &kp SPACE &lt 1 SPACE &kp UP  &kp LEFT    &kp DOWN  &kp RIGHT &kp C_PP
 			>;
 
-			sensor-bindings = <&right>;
+			sensor-bindings = <&layer_rotate 1 0>;
 		};
 
-		right {
+		num_layer {
 			label = "XD";
 			bindings = <
 				&kp LS(GRAVE) &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(N7) &kp LS(N8)    &kp LS(N9)   &kp LS(N0) &kp DEL
