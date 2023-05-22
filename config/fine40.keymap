@@ -10,8 +10,9 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #define ''AIR'' 0
-#define XD 1
-#define LOL 2
+#define xd 1
+#define lol 2
+#define control 3
 / {
   behaviors {
     layer_rotate: layer_rotate {
@@ -36,7 +37,7 @@
                 <&inc_dec_kp 0 0>;
 		};
 
-		num_layer {
+		xd_layer {
 			label = "XD";
 			bindings = <
 				&kp LS(GRAVE) &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(N7) &kp LS(N8)    &kp LS(N9)   &kp LS(N0) &kp DEL
@@ -47,7 +48,7 @@
 			sensor-bindings = <&layer_rotate 2 0>;
 		};
 
-		left {
+		lol_layer {
 			label = "LOL";
 			bindings = <
 				&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7    &kp N8    &kp N9    &kp N0   &kp BSPC
@@ -60,7 +61,7 @@
                 <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
 		};
 
-		control {
+		control_layer {
 			bindings = <
 				&sys_reset &bootloader &bt BT_CLR &bt BT_PRV &bt BT_NXT &trans  &trans  &trans  &trans  &trans  &trans  &trans
 				&trans     &kp F11     &kp F12    &kp F13    &kp F14    &kp F15 &kp F16 &kp F17 &kp F18 &kp F19 &kp F20 &trans
