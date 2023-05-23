@@ -38,9 +38,9 @@
 		left {
 			label = "CAPSLOCK";
 			bindings = <
-				&kp ESC   &kp LS(Q)    &kp LS(W)    &kp LS(E)    &kpLS(R) &kp LS(T)     &kp LS(Y)       &kp LS(U)     &kp LS(I)     &kp LS(O)     &kp LS(P)     &kp BSPC
-				&lt 3 TAB &kp LS(A)    &kp LS(S)    &kp LS(D)    &kp LS(F) &kp LS(G)     &kp LS(H)       &kp LS(J)     &kp LS(K)     &kp LS(L)     &kp SEMI  &kp RET
-				&kp LCAPS &kp LS(Z)    &kp LS(X)    &kp LS(C)    &kp LS(V) &kp LS(B)     &kp LS(N)       &kp LS(M)     &kp COMMA &kp DOT   &kp UP  &kp UNDER
+				&kp ESC &kp LS(Q) &kp LS(W) &kp LS(E) &kpLS(R) &kp LS(T) &kp LS(Y) &kp LS(U) &kp LS(I) &kp LS(O) &kp LS(P) &kp BSPC
+				&lt 3 TAB &kp LS(A) &kp LS(S) &kp LS(D) &kp LS(F) &kp LS(G) &kp LS(H) &kp LS(J) &kp LS(K) &kp LS(L) &kp SEMI  &kp RET
+				&kp LCAPS &kp LS(Z) &kp LS(X) &kp LS(C) &kp LS(V) &kp LS(B) &kp LS(N) &kp LS(M) &kp COMMA &kp DOT &kp UP &kp UNDER
 				&kp LALT &kp LSHFT &kp LALT &kp BSLH &mo 2 &kp SPACE &lt 1 SPACE &kp UP  &kp LEFT    &kp DOWN  &kp RIGHT &kp C_PP
 			>;
 		};
