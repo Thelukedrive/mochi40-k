@@ -31,7 +31,7 @@ keymap {
 				&to 1 &kp LALT &kp LALT &kp BSLH &mo 2 &kp SPACE &lt 1 SPACE &kp UP  &kp LEFT    &kp DOWN  &kp RIGHT &kp C_PP
 			>;
 
-			sensor-bindings = <&rot_kp to 1 PG_DN>;
+			sensor-bindings = <&rot_kp &to 1 PG_DN>;
 		};
 
 		right {
