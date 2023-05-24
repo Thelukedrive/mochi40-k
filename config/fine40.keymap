@@ -10,16 +10,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
-behaviors {
-        rot_to: behavior_sensor_rotate_to {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "ENC_TO";
-            #sensor-binding-cells = <2>;
-            bindings = <&to>, <&to>;
-        };
-    };
-
-keymap {
+	keymap {
 		compatible = "zmk,keymap";
 
 		default_layer {
@@ -31,7 +22,7 @@ keymap {
 				&to 1 &kp LALT &kp LALT &kp BSLH &mo 2 &kp SPACE &lt 1 SPACE &kp UP  &kp LEFT    &kp DOWN  &kp RIGHT &kp C_PP
 			>;
 
-			sensor-bindings = <&rot_to 1 2>;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 
 		right {
