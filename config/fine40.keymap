@@ -12,9 +12,9 @@
 / {
 behaviors {
         rot_kp: behavior_sensor_rotate_kp {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENC_KP";
-            #sensor-binding-cells = <0>;
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "ENC_TO";
+            #sensor-binding-cells = <2>;
             bindings = <&to>, <&to>;
         };
     };
