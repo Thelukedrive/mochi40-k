@@ -15,7 +15,7 @@ behaviors {
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "ENC_KP";
             #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&to 1>, <&kp>;
         };
     };
 
@@ -31,7 +31,7 @@ keymap {
 				&to 1 &kp LALT &kp LALT &kp BSLH &mo 2 &kp SPACE &lt 1 SPACE &kp UP  &kp LEFT    &kp DOWN  &kp RIGHT &kp C_PP
 			>;
 
-			sensor-bindings = <&rot_kp &to 1 PG_DN>;
+			sensor-bindings = <&rot_kp PG_DN PG_DN>;
 		};
 
 		right {
