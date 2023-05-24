@@ -11,7 +11,7 @@
 
 / {
 behaviors {
-        rot_to: behavior_sensor_rotate_kp {
+        rot_to: behavior_sensor_rotate_to {
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "ENC_TO";
             #sensor-binding-cells = <2>;
