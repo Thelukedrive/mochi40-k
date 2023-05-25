@@ -15,7 +15,7 @@ behaviors {
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "ENC_TO";
             #sensor-binding-cells = <3>;
-            bindings = <&to>, <&to>, <&to>;
+            bindings = <&to>, <&to>;
         };
     };
 
@@ -28,10 +28,10 @@ keymap {
 				&kp ESC   &kp Q    &kp W    &kp E    &kp R &kp T     &kp Y       &kp U     &kp I     &kp O     &kp P     &kp BSPC
 				&lt 3 TAB &kp A    &kp S    &kp D    &kp F &kp G     &kp H       &kp J     &kp K     &kp L     &kp SEMI  &kp RET
 				&to 2 &kp Z    &kp X    &kp C    &kp V &kp B     &kp N       &kp M     &kp COMMA &kp DOT   &kp UP  &kp UNDER
-				&to 1 &kp LALT &kp LALT &kp BSLH &mo 2 &kp SPACE &lt 1 SPACE &kp UP  &kp LEFT    &kp DOWN  &kp RIGHT &kp C_PP
+				&to 1 &kp LALT &kp LALT &kp BSLH &mo 2 &kp SPACE &lt 1 SPACE &kp UP  &kp LEFT    &kp DOWN  &kp RIGHT &to 0
 			>;
 
-			sensor-bindings = <&rot_to 0 2 3>;
+			sensor-bindings = <&rot_to 2 3>;
 		};
 
 		right {
