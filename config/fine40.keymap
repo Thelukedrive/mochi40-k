@@ -31,7 +31,7 @@ keymap {
 				&to 1 &kp LALT &kp LALT &kp BSLH &mo 2 &kp SPACE &lt 1 SPACE &kp UP  &kp LEFT    &kp DOWN  &kp RIGHT &kp C_PP
 			>;
 
-			sensor-bindings = <&rot_to 1 2>;
+			sensor-bindings = <&rot_to 0 3>;
 		};
 
 		right {
@@ -45,7 +45,7 @@ keymap {
 		};
 
 		left {
-			label = "CAPSLOCk";
+			label = "CAPSLOCK";
 			bindings = <
 				&kp ESC   &kp LS(Q)    &kp LS(W)    &kp LS(E)    &kp LS(R) &kp LS(T)     &kp LS(Y)       &kp LS(U)     &kp LS(I)     &kp LS(O)     &kp LS(P)     &kp BSPC
 				&lt 3 TAB &kp LS(A)    &kp LS(S)    &kp LS(D)    &kp LS(F) &kp LS(G)     &kp LS(H)       &kp LS(J)     &kp LS(K)     &kp LS(L)     &kp SEMI  &kp RET
@@ -55,8 +55,9 @@ keymap {
 		};
 
 		control {
+			label = "SYMBOLS"
 			bindings = <
-				&sys_reset &bootloader &bt BT_CLR &bt BT_PRV &bt BT_NXT &trans  &trans  &trans  &trans  &trans  &trans  &trans
+				&kp ESC &kp AT &kp MINUS &kp LS(MINUS) &kp EXCL &kp COLON  &trans  &trans  &trans  &trans  &trans  &trans
 				&trans     &kp F11     &kp F12    &kp F13    &kp F14    &kp F15 &kp F16 &kp F17 &kp F18 &kp F19 &kp F20 &trans
 				&trans     &kp F1      &kp F2     &kp F3     &kp F4     &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &trans
 				&trans     &trans      &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &ext_power EP_ON
