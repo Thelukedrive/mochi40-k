@@ -18,9 +18,9 @@ keymap {
 			label = "''AIR''";
 			bindings = <
 				&kp ESC   &kp Q    &kp W    &kp E    &kp R &kp T     &kp Y       &kp U     &kp I     &kp O     &kp P     &kp BSPC
-				&to 3 TAB &kp A    &kp S    &kp D    &kp F &kp G     &kp H       &kp J     &kp K     &kp L     &kp SEMI  &kp RET
+				&lt 3 TAB &kp A    &kp S    &kp D    &kp F &kp G     &kp H       &kp J     &kp K     &kp L     &kp SEMI  &kp RET
 				&to 2 &kp Z    &kp X    &kp C    &kp V &kp B     &kp N       &kp M     &kp COMMA &kp DOT   &kp UP  &kp UNDER
-				&to 1 &lt 3 TAB &kp LALT &kp BSLH &mo 2 &kp SPACE &lt 1 SPACE &kp UP  &kp LEFT    &kp DOWN  &kp RIGHT &kp C_PP
+				&to 1 &kp LALT &kp LALT &kp BSLH &mo 2 &kp SPACE &lt 1 SPACE &kp UP  &kp LEFT    &kp DOWN  &kp RIGHT &kp C_PP
 			>;
 
 			 sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
