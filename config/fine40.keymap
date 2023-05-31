@@ -11,6 +11,14 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+behaviors {
+        bt_encoder: bt_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "BT_ENCODER";
+            #sensor-binding-cells = <0>;
+            bindings = <&bt BT_NXT>, <&bt BT_PRV>;
+        };
+    };
 keymap {
 		compatible = "zmk,keymap";
 
@@ -23,7 +31,7 @@ keymap {
 				&to 1 &to 3 &kp LALT &kp BSLH &mo 2 &kp SPACE &lt 1 SPACE &kp UP  &kp LEFT    &kp DOWN  &kp RIGHT &kp C_PP
 			>;
 
-			 sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+			 sensor-bindings = <&bt_encoder>;
 		};
 
 		right {
@@ -52,7 +60,7 @@ keymap {
 				&sys_reset &bootloader &bt BT_CLR &bt BT_PRV &bt BT_NXT &trans  &trans  &trans  &trans  &trans  &trans  &trans
 				&trans     &out OUT_TOG     &kp F12    &kp F13    &kp F14    &kp F15 &kp F16 &kp F17 &kp F18 &kp F19 &kp F20 &trans
 				&trans     &kp F1      &kp F2     &kp F3     &kp F4     &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp C_VOLUME_UP &trans
-				&trans     &to 0      &trans     &trans     &trans     &trans  &trans  &trans  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_NEXT  &ext_power EP_ON
+				&trans     &to 0      &trans     &trans     &trans     &trans  &trans  &trans  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_NEXT  &kp C_PP
 			>;
 		};
 	};
